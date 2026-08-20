@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Reusable Continuous Typing & Erasing Animation Function
-    function startTypingEffect(elementId, textToType, typingSpeed = 150, deletingSpeed = 100, pauseTime = 2000) {
+    // Typing animation function with desktop loop control
+    function startTypingEffect(elementId, textToType, typingSpeed = 150, deletingSpeed = 100, pauseTime = 2000, loopOnMobile = true) {
         const textElement = document.getElementById(elementId);
         if (!textElement) return;
 
@@ -8,10 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let isDeleting = false;
 
         function loop() {
+            if (!textElement) return;
+            
+            const isDesktop = window.innerWidth > 950; 
+
             if (!isDeleting) {
                 textElement.textContent = textToType.substring(0, charIndex + 1);
                 charIndex++;
                 if (charIndex === textToType.length) {
+                    if (!isDesktop && !loopOnMobile) return; 
+
                     setTimeout(() => { isDeleting = true; loop(); }, pauseTime);
                     return;
                 }
@@ -30,8 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(loop, 500);
     }
 
-    // Apply continuous alternate typing animation to all headings
-    startTypingEffect('typedText', 'KRISHANU');
+    // Apply typing effect:
+    // 'typedText' ('KRISHANU') -> Ab yahan last parameter true kar diya hai, jisse laptop/desktop par continuous alternate animation chalegi!
+    startTypingEffect('typedText', 'KRISHANU', 150, 100, 2000, true);
+
+    // Baaki sections sabhi views par loop karte rahenge
     startTypingEffect('typedCoding', 'CODING_KNOWLEDGE');
     startTypingEffect('typedGaming', 'GAMING_INTEREST');
     startTypingEffect('typedCourses', 'COURSE_INFO');
@@ -54,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Theme Switcher (Dark Mode <-> Light Sky Blue Mode)
+    // Theme Switcher Logic
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
