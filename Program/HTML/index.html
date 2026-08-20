@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Portfolio - KRISHANU</title>
+    <link rel="stylesheet" href="\CSS\index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <div class="cyber-grid"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <header class="heading">
+        <!-- Animated Typing Logo -->
+        <div class="logo-container">
+            <span class="prompt">&gt; </span><span class="typed-text" id="typedText"></span><span class="cursor">_</span>
+        </div>
+        
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="active">~/home</a>
+            <a href="#coding">~/coding</a>
+            <a href="#gaming">~/gaming</a>
+            <a href="#courses">~/courses</a>
+            <a href="#contact">~/contact</a>
+        </nav>
+        
+        <button type="button" class="btn" id="themeToggle" aria-label="Toggle Theme" title="Switch Theme"></button>
+        <button type="button" class="menu-btn" id="menuToggle" aria-label="Toggle Menu"></button>
+    </header>
+
+    <!-- Hero Section with Profile Image (\image\img.jpg) -->
+    <main class="body1" id="home">
+        <div class="hero-content">
+            <div class="badge">root@krishanu:~# BCA_student & dev</div>
+            <h3 class="greeting">Hello it's me</h3>
+            <h1 class="my-name">KRISHANU</h1>
+            <h3 class="role">And i'm a | <span class="highlight">Developer & Gamer</span></h3>
+            <p class="bio">Pursuing BCA with a strong foundation in computer science and system programming. Passionate about writing efficient code, managing terminal architectures, and exploring high-performance gaming.</p>
+            
+            <div class="cta-group">
+                <button class="hire-btn">EXECUTE_ME</button>
+                <a href="#coding" class="secondary-btn">Explore Logs</a>
+            </div>
+        </div>
+
+        <div class="hero-img-container">
+            <div class="shape-bg"></div>
+            <image src="\image\img.jpg" class="img" alt="Profile Image"></image>
+        </div>
+    </main>
+
+    <!-- Section 1: Coding Knowledge with \image\img1.jpg -->
+    <section class="extra-section" id="coding">
+        <div class="extra-card">
+            <div class="extra-info">
+                <h2>&gt; <span id="typedCoding"></span><span class="cursor">_</span></h2>
+                <p>Equipped with hands-on expertise in core programming and structural languages:</p>
+                <ul type="disc" style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Languages:</strong> C Programming, Python, Java, and SQL.</li>
+                    <li><strong>Core Domains:</strong> Data Structures, Computer Architecture, and algorithms.</li>
+                    <li><strong>Environments:</strong> VS Code customization, Linux & Termux shell scripting.</li>
+                </ul>
+            </div>
+            <div class="extra-img-box">
+                <img src="\image\img1.jpg" alt="Coding Knowledge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Gaming Interest with \image\img2.png -->
+    <section class="extra-section" id="gaming">
+        <div class="extra-card reverse">
+            <div class="extra-info">
+                <h2>&gt; <span id="typedGaming"></span><span class="cursor">_</span></h2>
+                <p>Passionate about gaming platforms, operating systems, and hardware optimization:</p>
+                <ul type="disc" style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Platform:</strong> Active Steam gaming enthusiast.</li>
+                    <li><strong>OS Setup:</strong> Managing multi-boot environments with Windows and Ubuntu.</li>
+                    <li><strong>Mobile Tech:</strong> Advanced shell execution and package handling via Termux.</li>
+                </ul>
+            </div>
+            <div class="extra-img-box">
+                <img src="\image\img2.png" alt="Gaming Interest">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Course Information with \image\img3.jpg -->
+    <section class="extra-section" id="courses">
+        <div class="extra-card">
+            <div class="extra-info">
+                <h2>&gt; <span id="typedCourses"></span><span class="cursor">_</span></h2>
+                <p>Academic background and short-term tech specializations:</p>
+                <ul type="disc" style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Degree:</strong> Bachelor of Computer Applications (BCA).</li>
+                    <li><strong>Focus Areas:</strong> Web design, database querying, and software development cycles.</li>
+                    <li><strong>Goal:</strong> Building real-world scalable applications and system-level tools.</li>
+                </ul>
+            </div>
+            <div class="extra-img-box">
+                <img src="\image\img3.jpg" alt="Course Information">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">&gt; <span id="typedContact"></span><span class="cursor">_</span></h2>
+            <p class="contact-desc">Drop a transmission or connect via secure channels.</p>
+            
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('thanks for feedback');">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Enter Your Message..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SEND_MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="/JS/index.js"></script>
+</body>
+</html>
