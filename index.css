@@ -308,29 +308,34 @@ body.light-theme .menu-btn {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0 0 40px var(--accent-glow);
     z-index: 1;
-    animation: cyberMorph 8s ease-in-out infinite alternate;
+    animation: cyberMorph 5s ease-in-out infinite alternate;
 }
 
 @keyframes cyberMorph {
-    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); }
-    100% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; transform: rotate(360deg); }
+    0% { border-radius: 200% 150% 200% 200% / 200% 120% 150% 150%; transform: rotate(60deg); }
+    50% {  border-radius:  200% 180% 150% 150% / 200% 150% 150% 200%; transform: rotate(120deg); }
+    100% {  border-radius:  200% 180% 150% 150% / 150% 250% 200% 150%; transform: rotate(180deg); }
+
 }
 
 .img {
-    height: 290px;
-    width: 290px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     object-fit: cover;
     position: relative;
     z-index: 2;
     border: 3px solid var(--accent-color);
     box-shadow: 0 0 25px var(--accent-glow);
-    animation: floatImage 4s ease-in-out infinite;
+    animation: floatImage 10s ease-in-out infinite;
 }
 
 @keyframes floatImage {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
+    20% { transform: translatex(-30px); }
+    40% { transform: translatex(30px); }
+    60% { transform: translatex(-20px); }
+    80% { transform: translatey(-30px); }s
     100% { transform: translateY(0px); }
 }
 
