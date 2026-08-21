@@ -332,10 +332,10 @@ body.light-theme .menu-btn {
 
 @keyframes floatImage {
     0% { transform: translateY(0px); }
-    20% { transform: translatex(-30px); }
+    20% { transform: translatex(-10px); }
     40% { transform: translatex(30px); }
     60% { transform: translatex(-20px); }
-    80% { transform: translatey(-30px); }s
+    80% { transform: translatey(-20px); }s
     100% { transform: translateY(0px); }
 }
 
